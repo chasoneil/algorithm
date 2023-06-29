@@ -11,13 +11,10 @@ public class _01_binary_ {
 
     public static void main(String[] args) {
 
-        printBinary(- 5);
+        printBinary(3);
+        printBinary(3 << 28);
+        printBinary((3 << 28) >> 28);
 
-        printBinary(4);
-
-        System.out.println(~4);
-
-        printBinary(~4);
 
     }
 
