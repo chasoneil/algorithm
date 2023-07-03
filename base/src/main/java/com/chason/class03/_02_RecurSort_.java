@@ -3,7 +3,7 @@ package com.chason.class03;
 /**
  * 归并排序
  */
-public class _02_recurSort_ {
+public class _02_RecurSort_ {
 
     public static void mergeSort (int[] arr) {
 
