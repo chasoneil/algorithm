@@ -1,5 +1,7 @@
 package com.chason.class04;
 
+import com.chason.class02.Node;
+
 public class Utils {
 
     public static void printArray(int[] arr) {
@@ -18,6 +20,17 @@ public class Utils {
         arr[i] = arr[i] ^ arr[j];
         arr[j] = arr[i] ^ arr[j];
         arr[i] = arr[i] ^ arr[j];
+    }
+
+    public static void printLinkedList(Node head) {
+
+        Node curr = head;
+        while (curr != null) {
+            System.out.print(curr.value + " ");
+            curr = curr.next;
+        }
+        System.out.println();
+
     }
 
 }
