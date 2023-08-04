@@ -1,6 +1,6 @@
 package com.chason.structrue.class06;
 
-import com.chason.structrue.class02.Node;
+import com.chason.structrue.base.Node;
 
 import java.util.Stack;
 

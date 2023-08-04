@@ -1,5 +1,7 @@
 package com.chason.structrue.class02;
 
+import com.chason.structrue.base.Node;
+
 /**
  * 删除单链表中给定的值
  */

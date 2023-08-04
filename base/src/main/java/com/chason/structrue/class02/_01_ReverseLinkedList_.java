@@ -1,5 +1,8 @@
 package com.chason.structrue.class02;
 
+import com.chason.structrue.base.DoubleNode;
+import com.chason.structrue.base.Node;
+
 /**
  *  反转链表
  *  反转单双链表

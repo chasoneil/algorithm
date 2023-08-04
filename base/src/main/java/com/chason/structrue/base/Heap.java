@@ -1,4 +1,6 @@
-package com.chason.structrue.class04;
+package com.chason.structrue.base;
+
+import com.chason.structrue.utils.Utils;
 
 /**
  * 堆的简单实现

@@ -1,4 +1,4 @@
-package com.chason.structrue.class02;
+package com.chason.structrue.base;
 
 /**
  * 双链表结构

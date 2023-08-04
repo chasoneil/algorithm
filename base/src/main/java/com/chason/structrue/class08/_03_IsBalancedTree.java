@@ -1,6 +1,6 @@
 package com.chason.structrue.class08;
 
-import com.chason.structrue.class07.Tree;
+import com.chason.structrue.base.Tree;
 
 /**
  * 给定一颗二叉树的头节点head，返回二叉树是不是个平衡二叉树

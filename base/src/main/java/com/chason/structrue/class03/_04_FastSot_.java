@@ -1,6 +1,6 @@
 package com.chason.structrue.class03;
 
-import com.chason.structrue.class04.Utils;
+import com.chason.structrue.utils.Utils;
 
 /**
  * 快排

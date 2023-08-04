@@ -1,5 +1,7 @@
 package com.chason.structrue.class06;
 
+import com.chason.structrue.base.RandomNode;
+
 /**
  * 克隆一个特殊链表
  * 这个链表除了有 next 指针之外 还有一个 random指针，random指针可能指向任何地方

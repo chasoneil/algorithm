@@ -1,5 +1,7 @@
 package com.chason.structrue.class07;
 
+import com.chason.structrue.base.Tree;
+
 import java.util.Stack;
 
 /**

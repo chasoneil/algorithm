@@ -1,4 +1,4 @@
-package com.chason.structrue.class07;
+package com.chason.structrue.base;
 
 /**
  * 二叉树

@@ -1,6 +1,6 @@
-package com.chason.structrue.class04;
+package com.chason.structrue.utils;
 
-import com.chason.structrue.class02.Node;
+import com.chason.structrue.base.Node;
 
 public class Utils {
 

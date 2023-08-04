@@ -1,6 +1,6 @@
 package com.chason.structrue.class08;
 
-import com.chason.structrue.class07.Tree;
+import com.chason.structrue.base.Tree;
 
 /**
  * 给定一颗二叉树的头节点，任意两个节点之间都存在距离1  也就是说从某个节点到另外的节点，中间经过几个节点（不能重复）

@@ -1,4 +1,4 @@
-package com.chason.structrue.class06;
+package com.chason.structrue.base;
 
 /**
  * 特殊的单链表，除了拥有一个指向next的 指针之外还有个random指针

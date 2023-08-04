@@ -1,4 +1,4 @@
-package com.chason.structrue.class08;
+package com.chason.structrue.base;
 
 
 public class TreeNode {

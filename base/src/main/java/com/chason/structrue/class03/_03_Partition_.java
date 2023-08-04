@@ -1,6 +1,6 @@
 package com.chason.structrue.class03;
 
-import com.chason.structrue.class04.Utils;
+import com.chason.structrue.utils.Utils;
 
 /**
  * 1. 给定一个数， 将数组比这个数小的数放在左边，比这个数大的放到右边

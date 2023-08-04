@@ -1,7 +1,7 @@
 package com.chason.structrue.class06;
 
-import com.chason.structrue.class02.Node;
-import com.chason.structrue.class04.Utils;
+import com.chason.structrue.base.Node;
+import com.chason.structrue.utils.Utils;
 
 /**
  * 在链表上玩荷兰国旗问题
