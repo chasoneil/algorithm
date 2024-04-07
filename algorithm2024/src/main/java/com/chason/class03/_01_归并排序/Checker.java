@@ -1,7 +1,6 @@
 package com.chason.class03._01_归并排序;
 
 
-import com.chason.class03._01_归并排序._01_Recursion;
 import org.junit.Test;
 
 public class Checker {
@@ -10,7 +9,7 @@ public class Checker {
     public void testGetMax () {
 
         int[] arr = randomArray(10, 10);
-        System.out.println(_01_Recursion.getMaxByRecursion(arr) == _01_Recursion.getMaxBase(arr));
+        System.out.println(RecursionGetMax.getMaxByRecursion(arr) == RecursionGetMax.getMaxBase(arr));
     }
 
     public int[] randomArray(int maxValue, int maxSize) {

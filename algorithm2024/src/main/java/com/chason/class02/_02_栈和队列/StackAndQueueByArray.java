@@ -4,7 +4,7 @@ package com.chason.class02._02_栈和队列;
 /**
  * 使用数组实现栈和队列
  */
-public class _02_StackAndQueue {
+public class StackAndQueueByArray {
 
     private static int[] arr = null;
 

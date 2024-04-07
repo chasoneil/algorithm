@@ -8,7 +8,7 @@ import java.util.Stack;
  * 使用栈实现队列
  * 使用队列实现栈
  */
-public class _04_StackAndQueueTransfer {
+public class StackAndQueueTransfer {
 
 
     public static class MyQueue {

@@ -1,6 +1,6 @@
 package com.chason.class03._01_归并排序;
 
-public class _02_MergeSort {
+public class MergeSort {
 
 
     public static void sort (int[] arr) {

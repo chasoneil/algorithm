@@ -4,7 +4,7 @@ package com.chason.class02._02_栈和队列;
 /**
  * 用双向链表实现栈和队列
  */
-public class _01_StackAndQueue {
+public class StackAndQueueByLinked {
 
 
     static class Node {

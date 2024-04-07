@@ -1,10 +1,6 @@
 package com.chason.class02._02_栈和队列;
 
 
-import com.chason.class02._02_栈和队列._01_StackAndQueue;
-import com.chason.class02._02_栈和队列._02_StackAndQueue;
-import com.chason.class02._02_栈和队列._03_StackGetMin;
-import com.chason.class02._02_栈和队列._04_StackAndQueueTransfer;
 import org.junit.Test;
 
 public class Checker {
@@ -14,7 +10,7 @@ public class Checker {
 
         int size = 10;
         int range = 10;
-        _01_StackAndQueue.MyStack stack = new _01_StackAndQueue.MyStack();
+        StackAndQueueByLinked.MyStack stack = new StackAndQueueByLinked.MyStack();
 
         System.out.print("push:[");
         for (int i=0; i<size; i++) {
@@ -43,7 +39,7 @@ public class Checker {
         int size = 10;
         int range = 10;
 
-        _01_StackAndQueue.MyQueue queue = new _01_StackAndQueue.MyQueue();
+        StackAndQueueByLinked.MyQueue queue = new StackAndQueueByLinked.MyQueue();
 
         System.out.print("push:[");
         for (int i=0; i<size; i++) {
@@ -75,7 +71,7 @@ public class Checker {
 
         int size = 10;
         int range = 10;
-        _02_StackAndQueue.MyStack stack = new _02_StackAndQueue.MyStack(size);
+        StackAndQueueByArray.MyStack stack = new StackAndQueueByArray.MyStack(size);
 
         System.out.print("push:[");
         for (int i=0; i<size; i++) {
@@ -102,7 +98,7 @@ public class Checker {
     @Test
     public void testStackGetMin () {
 
-        _03_StackGetMin stackGetMin = new _03_StackGetMin();
+        StackGetMin stackGetMin = new StackGetMin();
         System.out.print("push:");
         for (int i=0; i<10; i++) {
             int random = (int) (Math.random() * 6) - (int) (Math.random() * 6);  // [-5, 5]
@@ -124,7 +120,7 @@ public class Checker {
     @Test
     public void testQueueBuildStack () {
 
-        _04_StackAndQueueTransfer.MyStack stack = new _04_StackAndQueueTransfer.MyStack();
+        StackAndQueueTransfer.MyStack stack = new StackAndQueueTransfer.MyStack();
 
         System.out.print("push:");
         for (int i=0; i<10; i++) {
@@ -144,7 +140,7 @@ public class Checker {
     @Test
     public void testStackBuildQueue () {
 
-        _04_StackAndQueueTransfer.MyQueue queue = new _04_StackAndQueueTransfer.MyQueue();
+        StackAndQueueTransfer.MyQueue queue = new StackAndQueueTransfer.MyQueue();
 
         System.out.print("push:");
         for (int i=0; i<10; i++) {

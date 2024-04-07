@@ -3,7 +3,7 @@ package com.chason.class03._01_归并排序;
 /**
  * 递归
  */
-public class _01_Recursion {
+public class RecursionGetMax {
 
 
     public static int getMaxByRecursion (int[] arr) {
