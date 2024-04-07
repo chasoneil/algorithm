@@ -7,7 +7,7 @@ import java.util.Stack;
  * 要求在任何时候都可以通过 getMin() 方法获取最小值
  * 要求getMin() 方法的时间复杂度为 O(1)
  */
-public class _03_StackGetMin {
+public class StackGetMin {
 
     private Stack<Integer> stack = new Stack<>();
 
