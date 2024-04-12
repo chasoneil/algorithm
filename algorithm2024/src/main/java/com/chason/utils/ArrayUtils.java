@@ -1,6 +1,7 @@
 package com.chason.utils;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class ArrayUtils {
 
@@ -74,6 +75,23 @@ public class ArrayUtils {
 
         System.out.println("]");
 
+    }
+
+    public static void printArray (List<Integer> list) {
+        if (list == null) {
+            return;
+        }
+
+        System.out.print("[");
+        for (int i=0; i<list.size(); i++) {
+
+            System.out.print(list.get(i));
+            if (i != list.size()-1) {
+                System.out.print(",");
+            }
+        }
+
+        System.out.println("]");
     }
 
 }
