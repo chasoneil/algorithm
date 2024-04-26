@@ -1,5 +1,6 @@
 package com.chason.class02._01_链表入门;
 
+
 import com.chason.class02.base.DoubleNode;
 import com.chason.class02.base.Node;
 import com.chason.utils.LinkedUtils;
@@ -32,13 +33,26 @@ public class LinkedChecker {
     @Test
     public void testRemoveNode () {
 
-        Node head1 = LinkedUtils.buildRandomNode(10, 10);
-        int randomTarget = (int)(Math.random() * (10 + 1)) - (int) (Math.random() * (10 + 1));
-        LinkedUtils.printNode(head1);
-        System.out.println();
-        System.out.println("target:" + randomTarget);
-        Node head2 = Linked.removeNode(head1, randomTarget);
-        LinkedUtils.printNode(head2);
+        int testTime = 100000;
+        int maxSize = 100;
+        int maxValue = 100;
+
+        boolean succeed = true;
+        for (int i=0; i<testTime; i++) {
+            Node head = LinkedUtils.buildRandomNode(maxSize, maxValue);
+            int randomTarget = (int)(Math.random() * (maxValue + 1)) - (int) (Math.random() * (maxValue + 1));
+            Node head1 = Linked.removeNode(head, randomTarget);
+            if (Linked.checkTargetExist(head1, randomTarget)) {
+                succeed = false;
+                break;
+            }
+        }
+
+        System.out.println(succeed ? "Nice~" : "Shit!");
+
     }
+
+
+
 
 }

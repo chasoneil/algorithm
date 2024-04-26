@@ -18,36 +18,47 @@ public class LinkedUtils {
         printDoubleNode(node);
     }
 
-    // 创建一个单链表
-    public static Node buildRandomNode (int size, int range) {
+    /**
+     * 创建一个随机的单链表
+     * @param maxSize  最大长度
+     * @param maxValue 最大值
+     * @return 单链表的头节点
+     */
+    public static Node buildRandomNode (int maxSize, int maxValue) {
+
+        int randomSize = (int) (Math.random() * (maxSize + 1));
 
         Node head = null;
-        Node prev = null;
-        for (int i=0; i<size; i++) {
+        Node curr = null;
+        for (int i=0; i<randomSize; i++) {
 
-            int randomNumber = (int) (Math.random() * (range + 1)) - (int) (Math.random() * (range + 1));
-
-            if (prev == null) {
-                head = prev = new Node(randomNumber);
+            int randomNumber = (int) (Math.random() * (maxValue + 1)) - (int) (Math.random() * (maxValue + 1));
+            if (curr == null) {
+                head = curr = new Node(randomNumber);
             } else {
-                prev.next = new Node(randomNumber);
-                prev = prev.next;
+                curr.next = new Node(randomNumber);
+                curr = curr.next;
             }
         }
         return head;
     }
 
-    // 创建一个双链表
-    public static DoubleNode buildRandomDoubleNode (int size, int range) {
+    /**
+     * 创建一个随机的双链表
+     * @param maxSize 最大长度
+     * @param maxValue 最大值
+     * @return 双链表的头节点
+     */
+    public static DoubleNode buildRandomDoubleNode (int maxSize, int maxValue) {
 
+        int randomSize = (int) (Math.random() * (maxSize + 1));
         DoubleNode head = null;
         DoubleNode prev = null;
 
-        for (int i=0; i<size; i++) {
+        for (int i=0; i<randomSize; i++) {
+            int randomNumber = (int) (Math.random() * (maxValue + 1)) - (int) (Math.random() * (maxValue + 1));
 
-            int randomNumber = (int) (Math.random() * (range + 1)) - (int) (Math.random() * (range + 1));
-
-            if (prev == null) {
+            if (head == null) {
                 head = prev = new DoubleNode(randomNumber);
             } else {
                 DoubleNode curr = new DoubleNode(randomNumber);
@@ -60,38 +71,51 @@ public class LinkedUtils {
         return head;
     }
 
+    /**
+     * 打印单链表
+     * @param head 单链表的头
+     */
     public static void printNode (Node head) {
 
         if (head == null) {
-            System.out.println("[]");
+            return;
         }
 
-        System.out.print("[");
-        while (head != null) {
-            System.out.print(head.value);
-            head = head.next;
-            if (head != null) {
-                System.out.print(",");
-            }
+        Node curr = head;
+        while (curr != null) {
+            System.out.print(curr.value + " -> ");
+            curr = curr.next;
         }
-        System.out.print("]");
+        System.out.println("null");
     }
 
+    /**
+     * 打印双链表
+     * @param head 双链表的头
+     */
     public static void printDoubleNode (DoubleNode head) {
 
         if (head == null) {
-            System.out.println("[]");
+            return;
         }
 
-        System.out.print("[");
-        while (head != null) {
-            System.out.print(head.value);
-            head = head.next;
-            if (head != null) {
-                System.out.print(",");
-            }
+        DoubleNode curr = head;
+        DoubleNode tail = curr;
+        System.out.print("正向:");
+        while (curr != null) {
+            System.out.print(curr.value + " -> ");
+            tail = curr;
+            curr = curr.next;
         }
-        System.out.print("]");
+        System.out.println("null");
+
+        System.out.print("反向:");
+        while (tail != null) {
+            System.out.print(tail.value + " -> ");
+            tail = tail.prev;
+        }
+
+        System.out.println("null");
     }
 
 
