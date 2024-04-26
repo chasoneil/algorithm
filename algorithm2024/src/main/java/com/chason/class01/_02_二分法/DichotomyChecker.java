@@ -53,14 +53,36 @@ public class DichotomyChecker {
         System.out.println(succeed ? "Nice" : "Shit");
     }
 
+    @Test
+    public void testAreaMin () {
+        int testTime = 1000000;
+        int maxSize = 100;
+        int maxValue = 100;
+
+        boolean succeed = true;
+        for (int i=0; i<testTime; i++) {
+            int[] arr = ArrayUtils.buildArrayNextNotEqual(maxSize, maxValue);
+            int position = Dichotomy.isNearlyMinExist(arr);
+
+            if (!checkNearlyMin(arr, position)) {
+                succeed = false;
+                ArrayUtils.printArray(arr);
+                System.out.println(position);
+                break;
+            }
+        }
+
+        System.out.println(succeed ? "Pass" : "Failed");
+    }
+
     private static boolean checkNearlyMin (int[] arr, int index) {
 
         if (index < 0) {
-            return false;
+            return true;
         }
 
         if (arr.length < 2) {
-            return false;
+            return true;
         }
 
         if (index == 0 && arr[index] < arr[index+1]) {

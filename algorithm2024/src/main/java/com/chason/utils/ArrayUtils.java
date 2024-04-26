@@ -27,6 +27,29 @@ public class ArrayUtils {
         return arr;
     }
 
+
+    public static int[]  buildArrayNextNotEqual (int maxSize, int maxValue) {
+
+        if (maxSize < 0) {
+            throw new RuntimeException("Array size is under 0.");
+        }
+
+        int randomSize = (int) (Math.random() * (maxSize + 1));
+        int[] arr = new int[randomSize];
+
+        int before = maxValue + 1;
+        for (int i=0; i<arr.length; i++) {
+            int random = (int)(Math.random() * (maxValue+1)) - (int)(Math.random() * (maxValue+1));
+            if (i != 0 && random == before) {
+                random--;
+            }
+            arr[i] = random;
+            before = random;
+        }
+
+        return arr;
+    }
+
     public static int[] copyArray(int[] arr) {
 
         if (arr == null) {
@@ -63,6 +86,11 @@ public class ArrayUtils {
             return;
         }
 
+        if (arr.length == 0) {
+            System.out.println("[]");
+            return;
+        }
+
         System.out.print("[");
 
         for (int i=0; i<arr.length; i++) {
@@ -79,6 +107,11 @@ public class ArrayUtils {
 
     public static void printArray (List<Integer> list) {
         if (list == null) {
+            return;
+        }
+
+        if (list.size() == 0) {
+            System.out.println("[]");
             return;
         }
 
