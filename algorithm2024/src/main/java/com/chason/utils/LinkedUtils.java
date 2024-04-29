@@ -4,6 +4,9 @@ import com.chason.class02.base.DoubleNode;
 import com.chason.class02.base.Node;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class LinkedUtils {
 
     @Test
@@ -118,5 +121,39 @@ public class LinkedUtils {
         System.out.println("null");
     }
 
+    public static Node copyNode (Node head) {
 
+        if (head == null) {
+            return null;
+        }
+
+        Node prev = new Node(head.value);
+        Node newCurr = prev;
+        Node curr = head;
+        while (curr != null) {
+            newCurr.next = new Node(curr.value);
+            newCurr = newCurr.next;
+            curr = curr.next;
+        }
+
+        return prev.next;
+    }
+
+
+    public static List<Integer> linkedToArray (Node head) {
+
+        if (head == null) {
+            return new ArrayList<>();
+        }
+
+        List<Integer> result = new ArrayList<>();
+
+        Node curr = head;
+        while (curr != null) {
+            result.add(curr.value);
+            curr = curr.next;
+        }
+
+        return result;
+    }
 }

@@ -6,17 +6,41 @@ import com.chason.class02.base.Node;
 import com.chason.utils.LinkedUtils;
 import org.junit.Test;
 
+import java.util.List;
+
 public class LinkedChecker {
 
     // 测试反转单链表
     @Test
     public void testReverseNode () {
 
-        Node head = LinkedUtils.buildRandomNode(10, 10);
-        LinkedUtils.printNode(head);
-        System.out.println();
-        Node newHead = Linked.reverseNode(head);
-        LinkedUtils.printNode(newHead);
+        int testTime = 100000;
+        int maxSize = 100;
+        int maxValue = 100;
+
+        boolean succeed = true;
+        for (int i=0; i<testTime; i++) {
+
+            Node head = LinkedUtils.buildRandomNode(maxSize, maxValue);
+            List<Integer> before = LinkedUtils.linkedToArray(head);
+            Node head1 = Linked.reverseNode(head);
+            List<Integer> after = LinkedUtils.linkedToArray(head1);
+
+            if (before.size() != after.size()) {
+                succeed = false;
+                break;
+            }
+
+            for (int j=0; j<before.size(); j++) {
+                if (before.get(j) != after.get(after.size()-1-j)) {
+                    succeed = false;
+                    break;
+                }
+            }
+        }
+
+        System.out.println(succeed ? "Nice~" : "Shit!");
+
     }
 
     @Test
@@ -51,8 +75,5 @@ public class LinkedChecker {
         System.out.println(succeed ? "Nice~" : "Shit!");
 
     }
-
-
-
 
 }
