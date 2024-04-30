@@ -96,7 +96,7 @@ public class Heap {
      * @param arr 无序数组
      * @param index 新数的index
      */
-    private static void heapInsert (int[] arr, int index) {
+    public static void heapInsert (int[] arr, int index) {
         while (arr[index] > arr[(index-1)/2]) {    // 当 index =0 这个判断条件必然不成立  arr[0] > arr[0] 必然错
             swap(arr, index, (index-1)/2);
             index = (index-1)/2;
@@ -110,7 +110,7 @@ public class Heap {
      * @param index 从index位置往下看
      * @param heapSize 堆的大小
      */
-    private static void heapIfy (int[] arr, int index, int heapSize) {
+    public static void heapIfy (int[] arr, int index, int heapSize) {
 
         int left = 2 * index + 1;
 
